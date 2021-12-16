@@ -2,6 +2,7 @@ package com.lsh.springboot.service.posts;
 
 import com.lsh.springboot.domain.posts.Posts;
 import com.lsh.springboot.domain.posts.PostsRepository;
+import com.lsh.springboot.web.dto.PostsListResponseDto;
 import com.lsh.springboot.web.dto.PostsResponseDto;
 import com.lsh.springboot.web.dto.PostsSaveRequestDto;
 import com.lsh.springboot.web.dto.PostsUpdateReqDto;
@@ -43,7 +44,7 @@ public class PostsService {
     }
 
     @Transactional(readOnly = true)
-    public List<PostsResponseDto> findAllDesc() {
-        return postsRepository.findAllDesc().stream().map(PostsResponseDto::new).collect(Collectors.toList());
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream().map(PostsListResponseDto::new).collect(Collectors.toList());
     }
 }
