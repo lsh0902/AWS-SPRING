@@ -1,0 +1,22 @@
+{{>layout/header}}
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" placeholder="제목 입력">
+            </div>
+            <div class="form-group">
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="author 입력">
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <input type="text" class="form-control" id="content" placeholder="content 입력">
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button class="btn btn-primary" id="btn-save" type="button">등록</button>
+    </div>
+</div>
+{{>layout/footer}}
