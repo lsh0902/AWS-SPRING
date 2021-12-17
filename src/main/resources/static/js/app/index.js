@@ -7,10 +7,10 @@ const postId = document.querySelector("#id");
 let main = {
     init : function() {
         let _this = this;
-        button.addEventListener('click', ()=>{
+        button && button.addEventListener('click', ()=>{
             _this.save();
         })
-        updateButton.addEventListener("click", ()=>{
+        updateButton && updateButton.addEventListener("click", ()=>{
             _this.update();
         })
     },
@@ -39,8 +39,9 @@ let main = {
             title: title.value,
             content:content.value
         };
+        console.log(data)
         let id = postId.value;
-        fetch("/api/v1/posts", {
+        fetch("/api/v1/posts/"+id, {
             method : 'PUT',
             headers : {
                 "Content-Type" : "application/json",
