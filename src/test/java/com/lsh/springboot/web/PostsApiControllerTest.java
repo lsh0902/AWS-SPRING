@@ -1,12 +1,10 @@
 package com.lsh.springboot.web;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lsh.springboot.domain.posts.Posts;
 import com.lsh.springboot.domain.posts.PostsRepository;
 import com.lsh.springboot.web.dto.PostsSaveRequestDto;
 import com.lsh.springboot.web.dto.PostsUpdateReqDto;
-import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +23,6 @@ import org.springframework.web.context.WebApplicationContext;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
