@@ -56,11 +56,9 @@ let main = {
 let isSuccess = (statusCode, success, fail, redirectUrl) => {
     if(statusCode == 200 || statusCode == 201) {
         alert(success);
-        window.location.href=redirectUrl;
+        window.location.href = redirectUrl;
     }
-    else {
-        alert(fail);
-    }
+    else alert(fail);
 }
 
 main.init();
